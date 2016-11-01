@@ -1,7 +1,7 @@
 !rofi
 rofi.color-enabled: true
 
-rofi.color-window: #99033865, #99033865
+rofi.color-window: #99033865, #FFFFFF
 
 !state             'bg',      'fg',    'bgalt',   'hlbg',  'hlfg'
 rofi.color-normal: #00000000, #ffffff, #00000000, #ffffff, #000000
