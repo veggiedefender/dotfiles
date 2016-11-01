@@ -47,7 +47,7 @@ bindsym Mod1+Shift+q kill
 # bindsym Mod1+d exec dmenu_run
 # bindsym Mod1+d exec rofi -show run
 
-bindsym Mod1+d exec rofi -show run -fullscreen -padding 450 -width 2 -font "Menlo for Powerline 20" -separator-style "none"
+bindsym Mod1+d exec rofi -show run -fullscreen -padding 450 -width 2 -font "Menlo for Powerline 20" -separator-style "none" -bw 0
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
