@@ -56,7 +56,7 @@ glx-swap-method = "2";
 #################################
 
 # Enabled client-side shadows on windows.
-shadow = true;
+shadow = false;
 # Don't draw shadows on DND windows.
 no-dnd-shadow = true;
 # Avoid drawing shadows on dock/panel windows.
@@ -138,9 +138,9 @@ blur-background-exclude = [
 #################################
 
 # Fade windows during opacity changes.
-fading = true;
+fading = false;
 # The time between steps in a fade in milliseconds. (default 10).
-fade-delta = 4;
+fade-delta = 0;
 # Opacity change between steps while fading in. (default 0.028).
 fade-in-step = 0.06;
 # Opacity change between steps while fading out. (default 0.03).
