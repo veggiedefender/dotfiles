@@ -1,13 +1,8 @@
-!rofi
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-
-rofi.color-window: #99033865, #FFFFFF
-
-!state             'bg',      'fg',    'bgalt',   'hlbg',  'hlfg'
-rofi.color-normal: #00000000, #ffffff, #00000000, #ffffff, #000000
-
-!bg Background color row
-!fg Text color
-!bgalt Background color alternating row
-!hlfg Foreground color selected row
-!hlbg Background color selected row
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
