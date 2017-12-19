@@ -7,9 +7,10 @@
 
 # i3 config file (v4)
 #
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $sup Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -147,21 +148,28 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
 bindsym $mod+r mode "resize"
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id ~/.config/compton/launch.sh
-exec_always --no-startup-id ~/.config/launch-redshift.sh
+bindsym $mod+n exec --no-startup-id nautilus
+bindsym $mod+b exec --no-startup-id subl
+bindsym $sup+l exec --no-startup-id physlock
+bindsym Print exec scrot ~/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/ghibli_small.png 
-
-bindsym $mod+n exec nautilus
-bindsym $mod+b exec subl
-
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+set $sup Mod4
 new_window none
 hide_edge_borders smart
 focus_follows_mouse yes
 popup_during_fullscreen smart
 
-bindsym Print exec scrot ~/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png
-exec xset m 1/1 0
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/ghibli.png
+
+exec xrandr --dpi 140
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
+exec --no-startup-id redshift
+exec --no-startup-id nm-applet
