@@ -1,0 +1,115 @@
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[colours]
+bg =    #ee292f37
+maia =  #259E83
+white = #e8e8e8
+red =   #ff4d4d
+grey =  #33
+clear = #00
+
+[bar/bottom]
+dpi = 180
+tray-position = right
+tray-maxsize = 1000
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+width = 100%
+height = 50
+radius = 0
+bottom = true
+
+background = ${colours.bg}
+
+;border-size = 30
+border-color =${colours.clear}
+
+border-bottom-size = 0
+border-bottom-color = ${colours.clear}
+
+padding = 2
+module-margin = 4
+
+font-0 = System San Francisco Display:size=9;5
+font-1 = FontAwesome:size=14;7
+font-2 = MaterialIcons:size=14;8
+;http://fontawesome.io/cheatsheet/
+;https://shanfan.github.io/material-icons-cheatsheet/
+
+modules-left   = i3
+modules-right  = volume battery clock
+
+[module/clock]
+type = internal/date
+date = %{F#66}%a %b %d   %{F#e8e8e8}%l:%M %p
+
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <bar-volume>
+;<label-volume>
+label-muted =  
+label-muted-foreground = ${colours.grey}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-foreground = ${colours.white}
+
+bar-volume-width = 6
+bar-volume-indicator =
+bar-volume-fill = 
+bar-volume-fill-font = 3
+bar-volume-fill-foreground = ${colours.white}
+bar-volume-empty = 
+bar-volume-empty-font = 3
+bar-volume-empty-foreground = ${colours.grey}
+
+;label-volume-foreground = ${colours.white}
+;label-volume-font = 0
+
+[module/battery]
+type = internal/battery
+full-at = 98
+battery = BAT0
+adapter = AC
+poll-interval = 5
+label-full = 
+format-charging = <ramp-capacity>   <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+[module/i3]
+type = internal/i3
+enable-scroll = false
+
+label-focused = %name%
+label-focused-foreground = ${colours.maia}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-foreground = ${colours.white}
+label-unfocused-padding = 2
+
+label-visible = %name%
+label-visible-foreground = ${colours.white}
+label-visible-padding = 2
+
+label-urgent = %name%
+label-urgent-foreground = ${colours.red}
+label-urgent-padding = 3
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = ${colours.white}
+label-mode-background = ${colours.grey}
+
+wrapping-scroll = false
