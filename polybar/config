@@ -93,15 +93,15 @@ enable-scroll = false
 
 label-focused = %name%
 label-focused-foreground = ${colours.maia}
-label-focused-padding = 3
+label-focused-padding = 2
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colours.white}
-label-unfocused-padding = 3
+label-unfocused-padding = 2
 
 label-visible = %name%
 label-visible-foreground = ${colours.white}
-label-visible-padding = 3
+label-visible-padding = 2
 
 label-urgent = %name%
 label-urgent-foreground = ${colours.red}
@@ -110,4 +110,6 @@ label-urgent-padding = 3
 label-mode = %mode%
 label-mode-padding = 2
 label-mode-foreground = ${colours.white}
-label-mode-background = ${colours.red}
+label-mode-background = ${colours.grey}
+
+wrapping-scroll = false
